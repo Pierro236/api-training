@@ -1,0 +1,31 @@
+version: "3"
+services: 
+  node:
+    image: node_express:v1
+    container_name: node_api
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+    depends_on: 
+      - mariadb
+
+  mariadb:
+    image: mariadb:latest
+    container_name: docker-mariadb
+    ports:
+      - "3307:3306"
+    environment: 
+      MYSQL_ROOT_PASSWORD: "password"
+    networks:
+      - backend
+    volumes:
+      - maria-data:/data/db
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  maria-data:
+    driver: local
