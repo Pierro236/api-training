@@ -16,7 +16,7 @@ npm start
 
 ## USE
 
-This API works on the REST standard, collecting two main pieces of information: the enceintes and the users that go with them.
+This API works on the REST standard, collecting informations about users.
 
 The application runs on port 3000 by default.
 
@@ -24,12 +24,9 @@ To test the api, you can use an api client like Postman or Insomnia.
 
 ## How does it work?
 
-### With http://localhost:3000/enceintes
-You can get all enceintes models
-    
-    
-### With http://localhost:3000/users
 You can perform four type of operations (Create - Read - Update - Delete)
+       
+### With http://localhost:3000/users
 
 - GET : Get all users
 
