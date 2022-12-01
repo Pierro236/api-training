@@ -1,7 +1,10 @@
 version: "3"
 services: 
   node:
-    image: node_express:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+  image: node_express
     container_name: node_api
     ports:
       - "3000:3000"
