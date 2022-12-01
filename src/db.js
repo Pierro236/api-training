@@ -4,7 +4,7 @@ const pool = mariadb.createPool({
     host: 'mariadb',
     user: 'root',
     password: 'password',
-    database: 'enceinte'
+    database: 'testuser'
 })
 
 export default pool
