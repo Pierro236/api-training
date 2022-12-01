@@ -15,7 +15,9 @@ You can directly use the api!
 
 ## If you doesn't have docker installed in your PC.
 
-For the database : change the host with your local database tool host in src/db.js
+For the database : 
+- Change the settings(host, username, password) with your local database tool configuration, install and  import if it's necessary the corresponding npm package .
+- Don't forget to create a database named "testuser"
 
 For the api:
 
