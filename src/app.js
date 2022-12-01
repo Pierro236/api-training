@@ -1,6 +1,5 @@
 
 import express from 'express'
-import enceinteRoute from '../routes/enceintes'
 import usersRoute from '../routes/users'
 import bodyParser from "body-parser"
 
@@ -8,9 +7,7 @@ const app = express()
 
 app.use(bodyParser.json());
 
-// enceintes Routes
-app.use('/enceintes', enceinteRoute)
-
+// Users Route
 app.use('/users', usersRoute )
 
 // Home Route
@@ -20,29 +17,6 @@ app.get('/', async (req, res) => {
     )
 })
 
-
-
-
-
-// app.get('/table', async (req, res) => {
-//     let conn
-//     try {
-//         conn = await pool.getConnection()
-
-//         let sql = `SHOW TABLES;`
-//         let result = await conn.query(sql)
-//         res.send(result)
-        
-//     } catch (error) {
-//         res.status(500).json({
-//             error
-//         })
-//     } finally {
-//         if (conn) {
-//             conn.release()
-//         }
-//     }
-// })
 
 const port = 3000
 
