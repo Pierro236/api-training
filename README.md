@@ -1,5 +1,24 @@
 ## USERS-API
 
+##  If you have docker installed in your PC.
+
+Run this command in the project root:
+
+```
+docker compose up --build -d
+
+```
+- The services will run
+- The MariaDB server run on port 3307
+
+You can directly use the api!
+
+## If you doesn't have docker installed in your PC.
+
+For the database : change the host with your local database tool host in src/db.js
+
+For the api:
+
 ## To install  the dependencies do:
 
 ``` 
